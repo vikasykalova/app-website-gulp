@@ -254,4 +254,15 @@ body {
         padding-bottom: $padding-vertical-sm;
     }
 }
+
+.copyright {
+    @include quicksand;
+
+    font-size: $fs-sm;
+    font-weight: $fw-medium;
+    
+    margin-top: $base * 7 ;
+    margin-left: $base * 24 ;
+    color: #AEB8D0;
+}
 /* // FOOTER END */

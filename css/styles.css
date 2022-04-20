@@ -140,4 +140,13 @@ body {
   padding-bottom: 60px;
 }
 
+.copyright {
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 28px;
+  margin-left: 96px;
+  color: #AEB8D0;
+}
+
 /* // FOOTER END */
