@@ -300,8 +300,20 @@ h5 {
 // CUSTOMERS
 .section-customers {
     .section-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         padding-top: $padding-vertical-sm;
         padding-bottom: $padding-vertical-sm;
+
+        a {
+            transition: $transition;
+            opacity: .3;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 }
 // CUSTOMERS ENDS

@@ -227,8 +227,18 @@ h5 {
 }
 
 .section-customers .section-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.section-customers .section-inner a {
+  transition: 0.2s;
+  opacity: 0.3;
+}
+.section-customers .section-inner a:hover {
+  opacity: 1;
 }
 
 .section-plan-and-manage {
