@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap");
 body {
   font-family: "Roboto", sans-serif;
+  color: #8d968d;
 }
 
 .section-outer {
@@ -36,6 +37,64 @@ body {
 }
 .btn--primary:hover {
   background-color: #b9d0ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: #3D4F9F;
+}
+
+h1,
+h2 {
+  margin-bottom: 28px;
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  margin-bottom: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 10 px;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.dots {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dots__item {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #D1D6E3;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.dots__item--active {
+  background-color: #5283FF;
+}
+.dots__item + .dots__item {
+  margin-left: 12px;
 }
 
 .section-header .section-inner {
@@ -113,6 +172,58 @@ body {
 
 .section-hero-image {
   background-color: #f4f7ff;
+  position: relative;
+}
+.section-hero-image .dots {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider__hero-image {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slider__hero-image__item {
+  height: 560px;
+  text-align: center;
+  background-size: cover;
+  background-position: 50% 100%;
+}
+.slider__hero-image__item-content h2 {
+  font-weight: 300;
+}
+.slider__hero-image__item-content h2 span {
+  font-weight: 500;
+}
+.slider__hero-image__item-content .text {
+  width: 60%;
+  margin: 0 auto 20px;
+  line-height: 2;
+}
+
+.icon-play {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  background-color: #fff;
+  box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+}
+.icon-play::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 16px;
+  content: "";
+  border-width: 8px 12px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #5E81FF;
 }
 
 .section-customers .section-inner {
