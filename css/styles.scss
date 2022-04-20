@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+
+// Mixin
+@mixin roboto {
+    font-family: 'Roboto', sans-serif; 
+}
+
+@mixin quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+// Mixin ends
+
+// Variables
+$base: 4px;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+$fs-sm: 12px ;
+$fs-md: 15px;
+
+$padding-vertical-xs: $base * 5;
+$padding-vertical-sm: $base * 15;
+$padding-vertical: $base * 30;
+
+$color-devider: #d8e3fe;
+
+$transition: .2s;
+
+$color-primary: #697ca6;
+$color-secondary: #6988FF;
+// Variables ends
+
+// Common
+body {
+    @include roboto;
+}
+
+.section-outer {
+    border-bottom: 1px solid $color-devider;
+}
+
+.section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: $padding-vertical;
+    padding-bottom: $padding-vertical;
+
+    &--wide {
+        max-width: 1200px;
+    }
+}
+
+.btn {
+    @include quicksand;
+
+    font-weight: $fw-bold;
+    font-style: $fs-sm;
+
+    margin: 0;
+    padding: $base*3 $base*4;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    background-color: none;
+    transition: $transition;
+
+    &--primary {
+        background-color: #D2E1FF;
+        color: #3A79FF;
+
+        &:hover {
+            background-color: darken(#D2E1FF, 5%);
+        }
+    }
+}
+// Common ends
+
+// HEADER
+.section-header {
+    .section-inner {
+        padding-top: $padding-vertical-xs;
+        padding-bottom: $padding-vertical-xs;
+    }
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: $base * 6;
+    height: $base * 6;
+    background-color: #5E81FE;
+    border-radius: 100%;
+}
+
+.nav {
+    margin-left: $base * 18;
+}
+
+.nav-wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    &__item {
+        & + & {
+            margin-left: $base * 10;
+        }
+
+        &-link {
+            @include quicksand;
+            font-style: $fs-sm;
+            font-weight: $fw-medium;
+            color: $color-primary;
+            text-decoration: none;
+            transition: $transition;
+
+            &:hover {
+                color: $color-secondary;
+                font-weight: $fw-bold;
+            }
+
+            &--active {
+                font-weight: $fw-bold;
+                color: $color-secondary;
+            }
+        }
+    }
+}
+
+.socials {
+    margin-left: auto;
+}
+.socials-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    &__item {
+        & + & {
+            margin-left: $base * 10;
+        }
+
+        &-link {
+            path {
+                fill: $color-primary;
+                transition: $transition; 
+            }
+            
+
+            &:hover {
+                path {
+                    fill: $color-secondary;
+                }
+                
+            }
+           
+        }
+    }
+}
+.socials-wrapper__item {
+}
+.socials-wrapper__item-link {
+}
+.socials-wrapper__item-link--active {
+}
+
+.btn-wrapper {
+    margin-left: $base * 11;
+}
+// HEADER ENDS
+
+// HERO-IMAGE
+.section-hero-image {
+    background-color: #f4f7ff;
+}
+// HERO-IMAGE ENDS
+
+// CUSTOMERS
+.section-customers {
+    .section-inner {
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }
+}
+// CUSTOMERS ENDS
+
+// PLAN-AND-MANAGE
+.section-plan-and-manage {
+    background-color: #f5f8ff;
+}
+// PLAN-AND-MANAGE ENDS
+
+// FEATURES
+.section-features {
+
+}
+// FEATURES ENDS
+
+// STATS
+.section-stats {
+    background-color: #e9efff;
+
+    .section-inner {
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }
+}
+// STATS ENDS
+
+// BLOG
+.section-blog {
+
+}
+// BLOG ENDS
+
+// QUOTES
+.section-quotes {
+
+}
+// QUOTES ENDS
+
+// FAQ
+.section-fag {
+
+}
+// FAQ ENDS
+
+// GET-STARTED
+.section-get-started {
+
+}
+// GET-STARTED ENDS
+
+// NEWSLETTER
+.section-newsletter {
+
+}
+// NEWSLETTER ENDS
+
+// FOOTER
+.section-footer {
+    border-bottom: none;
+    .section-inner {
+        padding-top: $padding-vertical-sm;
+        padding-bottom: $padding-vertical-sm;
+    }
+}
+/* // FOOTER END */

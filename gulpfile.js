@@ -5,54 +5,43 @@ const browserSync   = require('browser-sync').create();
 const uglify        = require('gulp-uglify-es').default;
 const autoprefixer  = require('gulp-autoprefixer');
 
-function browsersync() {
-    browserSync.init({
-        server : {
-            baseDir: '.app/'
-        }
-    });
-}
-
-function scripts() {
-    return src([
-        'app/js/*.js'
-    ])
-    .pipe(uglify())
-    .pipe(dest('app/js/'))
-    .pipe(browserSync.stream());
-}
-
 function style() {
-    return src('.app/css/**/*.scss')
+    return src('./css/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             overrideBrowserlist: ['last 10 version'],
             grid: true
         }))
-        .pipe(dest('.app/css/'))
+        .pipe(dest('./css/'))
         .pipe(browserSync.stream());
 }
 
-function watching() {
-    watch(['.app/css/**/*.scss'], style);
-    watch(['.app/js/**/*.js'], scripts);
-    watch(['.app/*.html']).on('change', browserSync.reload);
+function browsersync() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+          }
+     });
 }
 
-function build() {
+function scripts() {
     return src([
-        'app/css/styles.css', 
-        'app/fonts/**/*',
-        'app/js/*.js',
-        'app/*.html',
-    ], {base: 'app'})
-    .pipe(dest('dist'));
+        '/js/*.js'
+    ])
+    .pipe(uglify())
+    .pipe(dest('/js/'))
+    .pipe(browserSync.stream());
+}
+
+function watching() {
+    watch(['./css/**/*.scss'], style);
+    watch(['./js/**/*.js']).on('change', browserSync.reload);
+    watch(['./*.html']).on('change', browserSync.reload);
 }
 
 exports.style = style;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
-exports.build = build;
 
-exports.default = parallel(scripts, browsersync, watching)
+exports.default = parallel(watching, browsersync, style, scripts);
