@@ -22,6 +22,8 @@ $fw-bold: 700;
 
 $fs-sm: 12px ;
 $fs-md: 15px;
+$fs-lg: 18px;
+$fs-xl: 48px;
 
 $padding-vertical-xs: $base * 5;
 $padding-vertical-sm: $base * 15;
@@ -497,10 +499,58 @@ h5 {
 // STATS
 .section-stats {
     background-color: #e9efff;
+    display: flex;
 
-    .section-inner {
-        padding-top: $padding-vertical-sm;
-        padding-bottom: $padding-vertical-sm;
+    &__icon {
+        margin-bottom: $base * 6;
+    }
+
+    &__number {
+        @include quicksand();
+
+        font-size: $fs-xl;
+        font-weight: $fw-regular;
+    }
+
+
+    &__text {
+        @include quicksand();
+
+        width: 50%;
+        font-size: $fs-lg;
+        font-weight: $fw-medium;
+        line-height: 1.5;
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+        padding: $base*16 $base*22;
+    }
+
+    &__left {
+        align-items: flex-end;
+        text-align: right;
+        background-color: #6988FF;
+        color: #fff;
+
+        h2 {
+            color: #fff;
+            font-weight: $fw-medium;
+        }
+    }
+
+    &__right {
+        text-align: left;
+        background-color: #E9EFFF;
+        color: #5E80FF;
+
+        h2 {
+            color: #5E80FF;
+            font-weight: $fw-medium;
+        }
     }
 }
 // STATS ENDS
