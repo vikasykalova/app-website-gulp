@@ -39,6 +39,13 @@ body {
 .btn--primary:hover {
   background-color: #b9d0ff;
 }
+.btn--danger {
+  background-color: #FFD7D7;
+  color: #D43F3F;
+}
+.btn--danger:hover {
+  background-color: #ffbebe;
+}
 .btn--secondary {
   background-color: #4c85ff;
   color: #fff;
@@ -80,6 +87,7 @@ h3 {
 }
 
 h4 {
+  margin-bottom: 80px;
   font-size: 24px;
 }
 
@@ -289,6 +297,83 @@ h5 {
 }
 .section-plan-and-manage__content .btn-group svg {
   margin-left: 4px;
+}
+
+.section-features {
+  background: url(../img/clouds.svg) no-repeat 50% 50%;
+}
+.section-features h4 {
+  font-weight: 500;
+}
+.section-features .btns {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.section-features .features-list {
+  display: flex;
+  /* justify-content: space-around; */
+  text-align: center;
+  list-style: none;
+  margin: 0 0 100px;
+  padding: 0;
+}
+.section-features .features-list__item {
+  flex-basis: 25%;
+  position: relative;
+}
+.section-features .features-list__item:not(:first-child) {
+  margin-left: 40px;
+}
+.section-features .features-list__item:not(:first-child)::before {
+  position: absolute;
+  content: "";
+  top: 120px;
+  left: -34px;
+  height: 1px;
+  width: 28px;
+  background-color: #DAE4FE;
+}
+.section-features .features-list__item-icon {
+  display: flex;
+  margin: 0 auto 32px;
+  justify-content: center;
+  align-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 100%;
+  background-color: #F1F5FF;
+}
+.section-features .features-list__item-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #4074F8;
+  margin-bottom: 32px;
+}
+.section-features .features-list__item-text {
+  line-height: 2;
+  margin: 0 auto 28px;
+}
+
+.or-block {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 40px;
+}
+.or-block::before, .or-block::after {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background-color: #DAE4FE;
+}
+.or-block::before {
+  margin-right: 16px;
+}
+.or-block::after {
+  margin-left: 16px;
 }
 
 .section-stats {

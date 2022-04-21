@@ -81,6 +81,15 @@ body {
         }
     }
 
+    &--danger {
+        background-color: #FFD7D7;
+        color: #D43F3F;
+
+        &:hover {
+            background-color: darken(#FFD7D7, 5%);
+        }
+    }
+
     &--secondary {
         background-color: #4c85ff;
         color: #fff;
@@ -124,7 +133,9 @@ h3 {
     font-size: 36px;
 }
 
-h4 {font-size: 24px;}
+h4 {
+    margin-bottom: $base * 20;
+    font-size: 24px;}
 
 h5 {
     margin-bottom: $base * 4;
@@ -391,7 +402,95 @@ h5 {
 
 // FEATURES
 .section-features {
+    background: url(../img/clouds.svg) no-repeat 50% 50%;
 
+    h4 {
+        font-weight: $fw-medium;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .features-list {
+        display: flex;
+        /* justify-content: space-around; */
+        text-align: center;
+        list-style: none;
+        margin: 0 0 $base*25;
+        padding: 0;
+
+        &__item {
+            flex-basis: 25%;
+            position: relative;
+
+            &:not(:first-child) {
+                margin-left: $base * 10;
+            }
+
+            &:not(:first-child)::before {
+                position: absolute;
+                content: '';
+                top: 120px;
+                left: -34px;
+                height: 1px;
+                width: 28px;
+                background-color: #DAE4FE;
+            }
+
+            &-icon {
+                display: flex;
+                margin: 0 auto $base*8;
+                justify-content: center;
+                align-items: center;
+
+                width: $base * 17;
+                height: $base * 17;
+                border-radius: 100%;
+                background-color: #F1F5FF;
+            }
+
+            &-title {
+                font-weight: $fw-bold;
+                font-size: $fs-md;
+                color: #4074F8;
+                margin-bottom: $base*8;
+            }
+
+            &-text {
+                line-height: 2;
+                margin: 0 auto $base*7;
+            }
+        }
+    }
+
+}
+
+.or-block {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 $base*4;
+    font-weight: $fw-medium;
+    font-size: $fs-sm;
+    line-height: $base * 10;
+
+    &::before,
+    &::after {
+        content: '';
+        width: $base * 4;
+        height: 1px;
+        background-color: #DAE4FE; 
+    }
+
+    &::before {
+        margin-right: $base * 4;
+    }
+
+    &::after {
+        margin-left: $base * 4;
+    }
 }
 // FEATURES ENDS
 
