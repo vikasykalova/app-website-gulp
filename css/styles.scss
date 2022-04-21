@@ -65,11 +65,12 @@ body {
 
     margin: 0;
     padding: $base*3 $base*4;
-    border: 0;
+    border: 1px solid transparent;
     border-radius: 2px;
     text-decoration: none;
-    background-color: none;
+    background: none;
     transition: $transition;
+    box-sizing: border-box;
 
     &--primary {
         background-color: #D2E1FF;
@@ -77,6 +78,25 @@ body {
 
         &:hover {
             background-color: darken(#D2E1FF, 5%);
+        }
+    }
+
+    &--secondary {
+        background-color: #4c85ff;
+        color: #fff;
+
+        &:hover {
+            background-color: darken(#4c85ff, 5%);
+        }
+    }
+
+    &--no-bg {
+        color: #adb4d2;
+        border: 1px solid #D1D1E4;
+
+        &:hover {
+            color: darken(#adb4d2, 7%);
+            border: 1px solid darken(#adb4d2, 7%);
         }
     }
 }
@@ -99,7 +119,10 @@ h2 {
     margin-bottom: $base * 7;
     font-size: 48px;}
 
-h3 {font-size: 36px;}
+h3 {
+    margin-bottom: $base * 7;
+    font-size: 36px;
+}
 
 h4 {font-size: 24px;}
 
@@ -133,6 +156,20 @@ h5 {
         & + & {
             margin-left: $base * 3;
         }
+    }
+}
+
+.btn-group {
+    display: inline-flex;
+
+    .btn:nth-child(1) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .btn:nth-child(2) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
     }
 }
 // Common ends
@@ -283,16 +320,11 @@ h5 {
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
 
-    &::before {
-        display: block;
-        width: 0;
-        height: 0;
-        margin-left: $base * 4;
-        content: '';
-        border-width: $base*2 $base*3 ;
-        border-style: solid;
-        border-color: transparent;
-        border-left-color: #5E81FF;
+    svg {
+        width: $base * 3;
+        height: $base * 3;
+
+        fill: #5E81FF; 
     }
 }
 // HERO-IMAGE ENDS
@@ -321,6 +353,39 @@ h5 {
 // PLAN-AND-MANAGE
 .section-plan-and-manage {
     background-color: #f5f8ff;
+    position: relative;
+    overflow: hidden;
+
+    &__content {
+        width: 50%;
+        
+
+        .aside-image {
+            position: absolute;
+            top: 10%;
+            left: 45%;
+        }
+
+        h2 {
+            font-weight: $fw-medium;
+
+            span {
+                font-weight: $fw-regular;
+            }
+        }
+
+        .text {
+            margin-bottom: $base * 12;
+            line-height: 2;
+        }
+
+        .btn-group {
+            svg {
+                margin-left: $base;
+            }
+        }
+    }
+
 }
 // PLAN-AND-MANAGE ENDS
 
