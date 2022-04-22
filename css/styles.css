@@ -55,6 +55,13 @@ body {
 .btn--secondary:hover {
   background-color: #3374ff;
 }
+.btn--secondary-inverted {
+  background-color: #fff;
+  color: #565F82;
+}
+.btn--secondary-inverted:hover {
+  background-color: #f2f2f2;
+}
 .btn--grayscale {
   background-color: #E8ECF4;
   color: #7382a3;
@@ -69,6 +76,14 @@ body {
 .btn--no-bg:hover {
   color: #969fc5;
   border: 1px solid #969fc5;
+}
+.btn--no-bg-inverted {
+  border: 1px solid #A0B4FF;
+  color: #C7D3FF;
+}
+.btn--no-bg-inverted:hover {
+  border-color: #e1e7ff;
+  color: #e1e7ff;
 }
 
 h1,
@@ -247,7 +262,7 @@ h5 {
   font-weight: 500;
 }
 .slider__hero-image__item-content .text {
-  width: 60%;
+  max-width: 60%;
   margin: 0 auto 20px;
   line-height: 2;
 }
@@ -665,6 +680,42 @@ h5 {
 }
 .section-fag .faq-accordion__item-content-btn {
   margin-left: 60px;
+}
+
+.section-get-started {
+  position: relative;
+  color: #fff;
+  background: linear-gradient(#6888FF, #5E80FF);
+  text-align: center;
+}
+.section-get-started::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  background: url(../img/clouds-get-started.svg) no-repeat 50% 50%;
+}
+.section-get-started .section-inner {
+  position: relative;
+  z-index: 10;
+}
+.section-get-started h2,
+.section-get-started h5 {
+  color: #fff;
+}
+.section-get-started h2 {
+  font-weight: 300;
+}
+.section-get-started h2 span {
+  font-weight: 500;
+}
+.section-get-started .text {
+  max-width: 60%;
+  margin: 0 auto 40px;
+  line-height: 2;
 }
 
 .section-footer {
