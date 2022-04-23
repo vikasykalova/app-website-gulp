@@ -19,10 +19,23 @@ body {
   max-width: 1200px;
 }
 
+.input {
+  padding: 12px 16px;
+  font-size: 12px;
+  border: 1px solid transparent;
+  color: #7A85AD;
+  background: #EFEFF7;
+  border-radius: 2px;
+}
+.input--size-lg {
+  padding: 20px 24px;
+  border-radius: 5px;
+}
+
 .btn {
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
-  font-style: 12px;
+  font-size: 12px;
   display: inline-block;
   margin: 0;
   padding: 12px 16px;
@@ -33,6 +46,11 @@ body {
   white-space: nowrap;
   transition: 0.2s;
   box-sizing: border-box;
+  cursor: pointer;
+}
+.btn--size-lg {
+  padding: 20px 60px;
+  border-radius: 5px;
 }
 .btn--primary {
   background-color: #D2E1FF;
@@ -642,15 +660,15 @@ h5 {
 .section-fag .faq-accordion__item--active .arrow {
   stroke: #495274;
 }
+.section-fag .faq-accordion__item--active .section-fag .faq-accordion__item-content {
+  display: flex;
+}
 .section-fag .faq-accordion__item--active .section-fag .faq-accordion__item-trigger {
   color: #495274;
   font-weight: 700;
 }
 .section-fag .faq-accordion__item--active .section-fag .faq-accordion__item-trigger-icon {
   transform: rotate(0);
-}
-.section-fag .faq-accordion__item--active .section-fag .faq-accordion__item-content {
-  display: flex;
 }
 .section-fag .faq-accordion__item-trigger {
   display: flex;
@@ -716,6 +734,47 @@ h5 {
   max-width: 60%;
   margin: 0 auto 40px;
   line-height: 2;
+}
+
+.section-newsletter {
+  background-color: #fcfdff;
+}
+.section-newsletter .section-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-newsletter__left {
+  flex-basis: 35%;
+}
+.section-newsletter__left-title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #3D4F9F;
+  margin-bottom: 16px;
+}
+.section-newsletter__left-text {
+  line-height: 2;
+  font-size: 15px;
+}
+.section-newsletter__right {
+  flex-basis: 60%;
+}
+
+.form-newsletter {
+  display: flex;
+}
+.form-newsletter .input {
+  flex-grow: 1;
+}
+.form-newsletter .btn {
+  margin-left: 12px;
+  background-color: #4D6CE1;
+  box-shadow: 0px 5px 15px 0px rgba(116, 104, 255, 0.2);
+}
+.form-newsletter .btn:hover {
+  background-color: #375add;
 }
 
 .section-footer {

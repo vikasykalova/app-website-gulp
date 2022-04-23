@@ -65,11 +65,25 @@ body {
     }
 }
 
+.input {
+    padding: $base*3 $base*4;
+    font-size: $fs-sm;
+    border: 1px solid transparent;
+    color: #7A85AD;
+    background: #EFEFF7;
+    border-radius: 2px;
+
+    &--size-lg {
+        padding: $base*5 $base*6;
+        border-radius: 5px; 
+    }
+}
+
 .btn {
     @include quicksand;
 
     font-weight: $fw-bold;
-    font-style: $fs-sm;
+    font-size: $fs-sm;
 
     display: inline-block;
     margin: 0;
@@ -81,6 +95,12 @@ body {
     white-space: nowrap;
     transition: $transition;
     box-sizing: border-box;
+    cursor: pointer;
+
+    &--size-lg {
+        padding: $base*5 $base*15;
+        border-radius: 5px;
+    }
 
     &--primary {
         background-color: #D2E1FF;
@@ -816,6 +836,10 @@ h5 {
                     stroke: #495274;
                 } 
 
+                #{$parent}-content {
+                    display: flex;
+                }
+
                 #{$parent}-trigger {
                     color: #495274;
                     font-weight: $fw-bold;
@@ -823,10 +847,6 @@ h5 {
                     &-icon {
                         transform: rotate(0);
                     }
-                }
-
-                #{$parent}-content {
-                    display: flex;
                 }
             }
 
@@ -914,7 +934,53 @@ h5 {
 
 // NEWSLETTER
 .section-newsletter {
+    background-color: #fcfdff;
 
+    .section-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__left {
+        flex-basis: 35%;
+
+        &-title {
+            @include quicksand();
+
+            font-size: $fs-lg;
+            font-weight: $fw-bold;
+            color: #3D4F9F;
+
+            margin-bottom: $base * 4;
+        }
+
+        &-text {
+            line-height: 2;
+            font-size: $fs-md;
+        }
+    }
+    &__right {
+        flex-basis: 60%;
+    }
+}
+
+.form-newsletter {
+    display: flex;
+
+    .input {
+        flex-grow: 1;
+    }
+
+    .btn {
+        margin-left: $base * 3;
+        background-color: #4D6CE1;
+        box-shadow: 0px 5px 15px 0px #7468FF33;
+
+        &:hover {
+            background-color: darken(#4D6CE1, 5%);
+        }
+    }
 }
 // NEWSLETTER ENDS
 
