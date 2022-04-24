@@ -35,12 +35,50 @@ $padding-vertical-xs: $base * 5;
 $padding-vertical-sm: $base * 15;
 $padding-vertical: $base * 30;
 
-$color-devider: #d8e3fe;
-
 $transition: .2s;
 
-$color-primary: #697ca6;
-$color-secondary: #6988FF;
+$color-white: #fff;
+
+// $color-primary: #495274;
+// $color-secondary: #6188FF;
+
+// Yellow
+$color-warning-500: #FFC735;
+
+// Cian 
+$color-cian-500: #35AAFF;
+
+// Red
+$color-danger-500: #FF3535;
+$color-danger-600: #D43F3F;
+
+
+// Grey
+$color-primary-50: #D1D1E4;
+$color-primary-100: #C7D3FF;
+$color-primary-200: #AEB8D0;
+$color-primary-300: #adb4d2;
+$color-primary-400: #8E96B7;
+$color-primary-500: #8d96bd; //
+$color-primary-600: #7382a3;
+$color-primary-700: #7A85AD;
+$color-primary-800: #676F95;
+$color-primary-900: #495274; 
+
+// Blue
+$color-secondary-50: #A0B4FF;
+$color-secondary-100: #6888FF;
+$color-secondary-200: #6188ff;
+$color-secondary-300: #5E80FF;
+$color-secondary-400: #5E81FE;
+$color-secondary-500: #4c85ff;
+$color-secondary-600: #5283FF;
+$color-secondary-700: #3A79FF;
+$color-secondary-800: #4074F8;
+$color-secondary-900: #3D4F9F;
+
+$color-devider: $color-primary-50;
+
 // Variables ends
 
 // Common
@@ -69,13 +107,13 @@ body {
     padding: $base*3 $base*4;
     font-size: $fs-sm;
     border: 1px solid transparent;
-    color: #7A85AD;
+    color: $color-primary-700;
     background: #EFEFF7;
-    border-radius: 2px;
+    border-radius: $base/2;
 
     &--size-lg {
         padding: $base*5 $base*6;
-        border-radius: 5px; 
+        border-radius: $base; 
     }
 }
 
@@ -89,7 +127,7 @@ body {
     margin: 0;
     padding: $base*3 $base*4;
     border: 1px solid transparent;
-    border-radius: 2px;
+    border-radius: $base/2;
     text-decoration: none;
     background: none;
     white-space: nowrap;
@@ -99,12 +137,12 @@ body {
 
     &--size-lg {
         padding: $base*5 $base*15;
-        border-radius: 5px;
+        border-radius: $base;
     }
 
     &--primary {
         background-color: #D2E1FF;
-        color: #3A79FF;
+        color: $color-secondary-700;
 
         &:hover {
             background-color: darken(#D2E1FF, 5%);
@@ -117,7 +155,7 @@ body {
 
     &--danger {
         background-color: #FFD7D7;
-        color: #D43F3F;
+        color: $color-danger-600;
 
         &:hover {
             background-color: darken(#FFD7D7, 5%);
@@ -125,26 +163,26 @@ body {
     }
 
     &--secondary {
-        background-color: #4c85ff;
-        color: #fff;
+        background-color: $color-secondary-500;
+        color: $color-white;
 
         &:hover {
-            background-color: darken(#4c85ff, 5%);
+            background-color: darken($color-secondary-500, 5%);
         }
 
         &-inverted {
-            background-color: #fff;
+            background-color: $color-white;
             color: #565F82;
 
             &:hover {
-                background-color: darken(#fff, 5%);
+                background-color: darken($color-white, 5%);
             }
         }
     }
 
     &--grayscale {
         background-color: #E8ECF4;
-        color: #7382a3;
+        color: $color-primary-600;
 
         &:hover {
             background-color: darken(#E8ECF4, 5%);
@@ -152,21 +190,21 @@ body {
     }
 
     &--no-bg {
-        color: #adb4d2;
-        border: 1px solid #D1D1E4;
+        color: $color-primary-300;
+        border: 1px solid $color-primary-50;
 
         &:hover {
-            color: darken(#adb4d2, 7%);
-            border: 1px solid darken(#adb4d2, 7%);
+            color: darken($color-primary-300, 7%);
+            border: 1px solid darken($color-primary-300, 7%);
         }
 
         &-inverted {
-            border: 1px solid #A0B4FF;
-            color: #C7D3FF;
+            border: 1px solid $color-secondary-50;
+            color: $color-primary-100;
 
             &:hover {
-                border-color: lighten(#C7D3FF, 5%);
-                color: lighten(#C7D3FF, 5%);
+                border-color: lighten($color-primary-100, 5%);
+                color: lighten($color-primary-100, 5%);
 
             }
         }
@@ -183,7 +221,7 @@ h6 {
      margin: 0;
      padding: 0;
      font-weight: $fw-regular;
-     color: #3D4F9F;
+     color: $color-secondary-900;
 }
 
 h1, 
@@ -226,7 +264,7 @@ h5 {
         cursor: pointer;
 
         &--active {
-            background-color: #5283FF;
+            background-color: $color-secondary-600;
         }
         & + & {
             margin-left: $base * 3;
@@ -265,7 +303,7 @@ h5 {
 .logo {
     width: $base * 6;
     height: $base * 6;
-    background-color: #5E81FE;
+    background-color: $color-secondary-400;
     border-radius: 100%;
 }
 
@@ -287,18 +325,18 @@ h5 {
             @include quicksand;
             font-style: $fs-sm;
             font-weight: $fw-medium;
-            color: $color-primary;
+            color: $color-primary-900;
             text-decoration: none;
             transition: $transition;
 
             &:hover {
-                color: $color-secondary;
+                color: $color-secondary-200;
                 font-weight: $fw-bold;
             }
 
             &--active {
                 font-weight: $fw-bold;
-                color: $color-secondary;
+                color: $color-secondary-200;
             }
         }
     }
@@ -321,14 +359,14 @@ h5 {
 
         &-link {
             path {
-                fill: $color-primary;
+                fill: $color-primary-900;
                 transition: $transition; 
             }
             
 
             &:hover {
                 path {
-                    fill: $color-secondary;
+                    fill: $color-secondary-200;
                 }
                 
             }
@@ -389,8 +427,8 @@ h5 {
     width: $base * 13;
     height: $base * 13;
     border-radius: 100%;
-    background-color: #fff;
-    box-shadow: 0px 10px 50px rgba(201, 209, 231, 0.6);
+    background-color: $color-white;
+    box-shadow: 0px $base*2 $base*12 rgba(201, 209, 231, 0.6);
 
     svg {
         width: $base * 3;
@@ -495,10 +533,10 @@ h5 {
             &:not(:first-child)::before {
                 position: absolute;
                 content: '';
-                top: 120px;
+                top: $base * 30;
                 left: -34px;
                 height: 1px;
-                width: 28px;
+                width: $base * 7;
                 background-color: #DAE4FE;
             }
 
@@ -517,7 +555,7 @@ h5 {
             &-title {
                 font-weight: $fw-bold;
                 font-size: $fs-md;
-                color: #4074F8;
+                color: $color-secondary-800;
                 margin-bottom: $base*8;
             }
 
@@ -594,10 +632,10 @@ h5 {
         align-items: flex-end;
         text-align: right;
         background-color: #6988FF;
-        color: #fff;
+        color: $color-white;
 
         h2 {
-            color: #fff;
+            color: $color-white;
             font-weight: $fw-medium;
         }
     }
@@ -605,10 +643,10 @@ h5 {
     &__right {
         text-align: left;
         background-color: #E9EFFF;
-        color: #5E80FF;
+        color: $color-secondary-300;
 
         h2 {
-            color: #5E80FF;
+            color: $color-secondary-300;
             font-weight: $fw-medium;
         }
     }
@@ -628,9 +666,9 @@ h5 {
 .slider-blog {
     @include list-null();
 
-    border: 1px solid #d8e3fe;
-    background-color: #fff;
-    box-shadow: 0px 15px 50px #EFF4FF;
+    border: 1px solid $color-primary-50;
+    background-color: $color-white;
+    box-shadow: 0px $base*3 $base*12 #EFF4FF;
 
     &__item {
         display: flex;
@@ -643,16 +681,16 @@ h5 {
 
         &-gallery {
             display: grid;
-            grid-template-rows: repeat(2, 120px);
-            grid-template-columns: repeat(3, 120px);
-            grid-gap: 12px;
+            grid-template-rows: repeat(2, $base*30);
+            grid-template-columns: repeat(3, $base*30);
+            grid-gap: $base*4;
 
             .image-link {
                 display: block;
                 position: relative;
-                border-radius: 5px; 
+                border-radius: $base; 
                 overflow: hidden;
-                box-shadow: 0px 15px 100px 0px #E5EBF8;
+                box-shadow: 0px $base*4 $base*25 0px #E5EBF8;
 
                 .loupe {
                     position: absolute;
@@ -660,7 +698,7 @@ h5 {
                     left: 50%;
                     transform: translate(-50%, -50%);
                     display: block;
-                    background: #fff url(../img/loup-min.svg) no-repeat 50% 50%;
+                    background: $color-white url(../img/loup-min.svg) no-repeat 50% 50%;
                     width: $base * 16;
                     height: $base * 16;
                     border-radius: 100%;
@@ -696,7 +734,7 @@ h5 {
                     grid-column: 1 / 3;
                     
                     &::before {
-                        background: linear-gradient(transparent, #FFC735);
+                        background: linear-gradient(transparent, $color-warning-500);
                     }
                 }
 
@@ -705,7 +743,7 @@ h5 {
                     grid-column: 3 / 4;
                     
                     &::before {
-                        background: linear-gradient(transparent, #FF3535);
+                        background: linear-gradient(transparent, $color-danger-500);
                     }
                 }
                 &--s-2 {
@@ -790,14 +828,14 @@ h5 {
     &__item {
         position: relative;
         padding: $base*10 $base*17 $base*15;
-        border: 1px solid #d8e3fe;
-        background-color: #fff;
-        box-shadow: 0px 5px 50px 0px #F3F5FA;
+        border: 1px solid $color-primary-50;
+        background-color: $color-white;
+        box-shadow: 0px $base $base*12 0px #F3F5FA;
 
         &-text {
             font-size: $fs-md;
             line-height: 2;
-            color: #676F95;
+            color: $color-primary-800;
         }
         &-photo {
             $heigth: $base * 15;
@@ -810,7 +848,7 @@ h5 {
             margin-top: -$heigth/2;
             border-radius: 100%;
             overflow: hidden;
-            background-color:#fff;
+            background-color:$color-white;
             transform: translateX(-50%);
         }
     }
@@ -829,11 +867,11 @@ h5 {
         &__item {
             $parent: &;
 
-            border-bottom: 1px solid #d8e3fe;
+            border-bottom: 1px solid $color-primary-50;
 
             &--active {
                 .arrow {
-                    stroke: #495274;
+                    stroke: $color-primary-900;
                 } 
 
                 #{$parent}-content {
@@ -841,7 +879,7 @@ h5 {
                 }
 
                 #{$parent}-trigger {
-                    color: #495274;
+                    color: $color-primary-900;
                     font-weight: $fw-bold;
 
                     &-icon {
@@ -862,7 +900,7 @@ h5 {
                     transform: rotate(180deg);
 
                     .arrow {
-                        stroke: #8E96B7;
+                        stroke: $color-primary-400;
                     }
                 }
                 &-text {
@@ -891,8 +929,8 @@ h5 {
 // GET-STARTED
 .section-get-started {
     position: relative;
-    color: #fff;
-    background: linear-gradient(#6888FF, #5E80FF);
+    color: $color-white;
+    background: linear-gradient($color-secondary-100, $color-secondary-300);
     text-align: center;
 
     &::before {
@@ -913,7 +951,7 @@ h5 {
 
     h2,
     h5 {
-        color: #fff;
+        color: $color-white;
     }
 
     h2 {
@@ -950,7 +988,7 @@ h5 {
 
             font-size: $fs-lg;
             font-weight: $fw-bold;
-            color: #3D4F9F;
+            color: $color-secondary-900;
 
             margin-bottom: $base * 4;
         }
@@ -975,7 +1013,7 @@ h5 {
     .btn {
         margin-left: $base * 3;
         background-color: #4D6CE1;
-        box-shadow: 0px 5px 15px 0px #7468FF33;
+        box-shadow: 0px $base $base*4 0px #7468FF33;
 
         &:hover {
             background-color: darken(#4D6CE1, 5%);
@@ -1001,6 +1039,6 @@ h5 {
 
     margin-top: $base * 7 ;
     margin-left: $base * 24 ;
-    color: #AEB8D0;
+    color: $color-primary-200;
 }
 /* // FOOTER END */
