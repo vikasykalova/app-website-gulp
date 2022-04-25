@@ -726,6 +726,10 @@ h2 {
         font-size: $fs-l;
         font-weight: $fw-medium;
         line-height: 1.5;
+
+        @media (min-width: $breakpoint-lg-min) {
+            width: 50%;
+        }
     }
 
     &__left,
