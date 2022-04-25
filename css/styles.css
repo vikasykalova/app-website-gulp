@@ -372,7 +372,7 @@ h2 {
   overflow: hidden;
 }
 .section-plan-and-manage__content {
-  width: 50%;
+  width: 60%;
 }
 .section-plan-and-manage__content .aside-image {
   position: absolute;
@@ -391,6 +391,11 @@ h2 {
 }
 .section-plan-and-manage__content .btn-group svg {
   margin-left: 0.25rem;
+}
+@media (min-width: 992px) {
+  .section-plan-and-manage__content {
+    width: 50%;
+  }
 }
 
 .section-features {

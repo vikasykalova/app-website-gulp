@@ -573,7 +573,7 @@ h2 {
     overflow: hidden;
 
     &__content {
-        width: 50%;
+        width: 60%;
         
 
         .aside-image {
@@ -599,6 +599,10 @@ h2 {
             svg {
                 margin-left: $base;
             }
+        }
+
+        @media (min-width: $breakpoint-lg-min) {
+            width: 50%;
         }
     }
 
