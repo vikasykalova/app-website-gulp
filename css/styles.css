@@ -170,14 +170,74 @@ h2 {
   border-bottom-left-radius: 0;
 }
 
+.main-navigation {
+  display: flex;
+  align-items: center;
+}
+.main-navigation__inner-wrap {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin-left: 72px;
+}
+@media (max-width: 991px) {
+  .section-header .main-navigation__inner-wrap {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    top: 100%;
+    right: 0;
+    left: 0;
+    margin-left: 0;
+    padding: 20px;
+    background-color: #fff;
+  }
+}
+@media (max-width: 991px) {
+  .main-navigation__inner-wrap {
+    flex-direction: column;
+  }
+  .main-navigation__inner-wrap .socials,
+.main-navigation__inner-wrap .nav {
+    margin-bottom: 16px;
+  }
+  .main-navigation__inner-wrap,
+.main-navigation__inner-wrap .socials,
+.main-navigation__inner-wrap .btn-wrapper {
+    margin-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .section-footer .main-navigation {
+    flex-direction: column;
+  }
+}
+
+.section-header {
+  position: relative;
+}
 .section-header .section-inner {
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.main-navigation {
-  display: flex;
-  align-items: center;
+.btn-burger {
+  display: none;
+  margin-left: auto;
+}
+.btn-burger__line {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #6888FF;
+}
+.btn-burger__line + .btn-burger__line {
+  margin-top: 4px;
+}
+@media (max-width: 991px) {
+  .btn-burger {
+    display: block;
+  }
 }
 
 .logo__link {
@@ -186,10 +246,6 @@ h2 {
   height: 24px;
   background-color: #5E81FE;
   border-radius: 100%;
-}
-
-.nav {
-  margin-left: 72px;
 }
 
 .nav-wrapper {
@@ -609,6 +665,11 @@ h2 {
   margin-left: 64px;
   transform: translateY(-50%) rotate(180deg);
 }
+@media (max-width: 1199px) {
+  .btn-blog {
+    display: none;
+  }
+}
 
 .section-quotes {
   background: linear-gradient(#eaebff, #f6f9ff);
@@ -801,6 +862,11 @@ h2 {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media (max-width: 991px) {
+  .section-footer .logo__link {
+    margin-bottom: 16px;
+  }
+}
 
 .copyright {
   font-family: "Quicksand", sans-serif;
@@ -809,6 +875,12 @@ h2 {
   margin-top: 28px;
   margin-left: 96px;
   color: #AEB8D0;
+}
+@media (max-width: 991px) {
+  .copyright {
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 /* // FOOTER END */
