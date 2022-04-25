@@ -814,10 +814,11 @@ h2 {
         justify-content: space-between;
         padding: $base*16 $base*8;
 
-        &-gallery,
+        /* &-gallery,
         &-content {
             flex-basis: 45%;
-        }
+        } */
+
 
         &-gallery {
             display: grid;
@@ -894,9 +895,17 @@ h2 {
                     }
                 }
             }
+
+            @media (max-width: $breakpoint-md-max) {
+                grid-template-rows: repeat(2, $base*25);
+                grid-template-columns: repeat(3, $base*25);
+                grid-gap: $base * 2;
+            }
         }
 
         &-content {
+            flex-grow: 1;
+            margin-left: $base * 5;
 
             .title {
             }
@@ -1128,6 +1137,10 @@ h2 {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: $breakpoint-md-max) {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -1147,6 +1160,10 @@ h2 {
         &-text {
             line-height: 2;
             font-size: $fs-s;
+        }
+
+        @media (max-width: $breakpoint-md-max) {
+            margin-bottom: $base * 5;
         }
     }
     &__right {
