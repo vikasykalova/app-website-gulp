@@ -18,6 +18,16 @@
 }
 // Mixin ends
 
+// Functions
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+    @return (strip-unit($num) / 16) * 1rem;
+}
+// Functions ends
+
 // Variables
 // $breakpoint-xs-min: 0;
 $breakpoint-sm-min: 576px;
@@ -31,20 +41,20 @@ $breakpoint-lg-max: $breakpoint-xl-min - 1px;
 $breakpoint-xxl-min: 1400px;
 $breakpoint-xl-max: $breakpoint-xxl-min - 1px;
 
-$base: 4px;
+$base: rem(4px);
 
 $fw-light: 300;
 $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
-$fs-xxs: 10px;
-$fs-xs: 12px ;
-$fs-s: 15px;
-$fs-m: 18px;
-$fs-l: 24px;
-$fs-xl: 36px;
-$fs-xxl: 48px;
+$fs-xxs: rem(10px);
+$fs-xs: rem(12px);
+$fs-s: rem(15px);
+$fs-m: rem(18px);
+$fs-l: rem(24px);
+$fs-xl: rem(36px);
+$fs-xxl: rem(48px);
 
 $padding-vertical-xs: $base * 5;
 $padding-vertical-sm: $base * 15;
@@ -97,6 +107,17 @@ $color-devider: $color-primary-50;
 // Variables ends
 
 // Common
+
+// html {
+//     @media (max-width: $breakpoint-md-max) {
+//         font-size: 14px;
+//     }
+
+//     @media (max-width: $breakpoint-sm-max) {
+//         font-size: 10px;
+//     }
+// }
+
 body {
     @include roboto;
 
@@ -248,23 +269,6 @@ h2 {
     text-transform: uppercase ;
 }
 
-
-// h3 {
-//     margin-bottom: $base * 7;
-//     font-size: 36px;
-// }
-
-// h4 {
-//     margin-bottom: $base * 20;
-//     font-size: 24px;}
-
-// h5 {
-//     margin-bottom: $base * 4;
-//     @include roboto();
-//     font-size: 10 px;
-//     text-transform: uppercase ;
-// }
-
 .section-subtitle {
     @include quicksand();
 
@@ -366,7 +370,7 @@ h2 {
         }
     }
 }
-// Common ends
+// Common ends 
 
 // HEADER
 .section-header {
