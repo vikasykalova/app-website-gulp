@@ -26,10 +26,13 @@ $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
-$fs-sm: 12px ;
-$fs-md: 15px;
-$fs-lg: 18px;
-$fs-xl: 48px;
+$fs-xxs: 10px;
+$fs-xs: 12px ;
+$fs-s: 15px;
+$fs-m: 18px;
+$fs-l: 24px;
+$fs-xl: 36px;
+$fs-xxl: 48px;
 
 $padding-vertical-xs: $base * 5;
 $padding-vertical-sm: $base * 15;
@@ -40,17 +43,17 @@ $transition: .2s;
 $color-white: #fff;
 
 // $color-primary: #495274;
-// $color-secondary: #6188FF;
+// $color-blue: #6188FF;
 
 // Yellow
-$color-warning-500: #FFC735;
+$color-yellow-500: #FFC735;
 
 // Cian 
 $color-cian-500: #35AAFF;
 
 // Red
-$color-danger-500: #FF3535;
-$color-danger-600: #D43F3F;
+$color-red-500: #FF3535;
+$color-red-600: #D43F3F;
 
 
 // Grey
@@ -66,16 +69,16 @@ $color-primary-800: #676F95;
 $color-primary-900: #495274; 
 
 // Blue
-$color-secondary-50: #A0B4FF;
-$color-secondary-100: #6888FF;
-$color-secondary-200: #6188ff;
-$color-secondary-300: #5E80FF;
-$color-secondary-400: #5E81FE;
-$color-secondary-500: #4c85ff;
-$color-secondary-600: #5283FF;
-$color-secondary-700: #3A79FF;
-$color-secondary-800: #4074F8;
-$color-secondary-900: #3D4F9F;
+$color-blue-50: #A0B4FF;
+$color-blue-100: #6888FF;
+$color-blue-200: #6188ff;
+$color-blue-300: #5E80FF;
+$color-blue-400: #5E81FE;
+$color-blue-500: #4c85ff;
+$color-blue-600: #5283FF;
+$color-blue-700: #3A79FF;
+$color-blue-800: #4074F8;
+$color-blue-900: #3D4F9F;
 
 $color-devider: $color-primary-50;
 
@@ -105,7 +108,7 @@ body {
 
 .input {
     padding: $base*3 $base*4;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     border: 1px solid transparent;
     color: $color-primary-700;
     background: #EFEFF7;
@@ -121,7 +124,7 @@ body {
     @include quicksand;
 
     font-weight: $fw-bold;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
 
     display: inline-block;
     margin: 0;
@@ -142,7 +145,7 @@ body {
 
     &--primary {
         background-color: #D2E1FF;
-        color: $color-secondary-700;
+        color: $color-blue-700;
 
         &:hover {
             background-color: darken(#D2E1FF, 5%);
@@ -155,7 +158,7 @@ body {
 
     &--danger {
         background-color: #FFD7D7;
-        color: $color-danger-600;
+        color: $color-red-600;
 
         &:hover {
             background-color: darken(#FFD7D7, 5%);
@@ -163,11 +166,11 @@ body {
     }
 
     &--secondary {
-        background-color: $color-secondary-500;
+        background-color: $color-blue-500;
         color: $color-white;
 
         &:hover {
-            background-color: darken($color-secondary-500, 5%);
+            background-color: darken($color-blue-500, 5%);
         }
 
         &-inverted {
@@ -199,7 +202,7 @@ body {
         }
 
         &-inverted {
-            border: 1px solid $color-secondary-50;
+            border: 1px solid $color-blue-50;
             color: $color-primary-100;
 
             &:hover {
@@ -221,14 +224,14 @@ h6 {
      margin: 0;
      padding: 0;
      font-weight: $fw-regular;
-     color: $color-secondary-900;
+     color: $color-blue-900;
 }
 
 h2 {
     @include roboto();
 
     margin-bottom: $base * 4;    
-    font-size: $base * 3;
+    font-size: $fs-xxs;
     text-transform: uppercase ;
 }
 
@@ -254,7 +257,7 @@ h2 {
 
     margin-bottom: $base * 7;
     font-size: $base * 12;
-    color: $color-secondary-900;
+    color: $color-blue-900;
 }
 
 .ta-c {
@@ -276,7 +279,7 @@ h2 {
         cursor: pointer;
 
         &--active {
-            background-color: $color-secondary-600;
+            background-color: $color-blue-600;
         }
         & + & {
             margin-left: $base * 3;
@@ -317,7 +320,7 @@ h2 {
         display: block;
         width: $base * 6;
         height: $base * 6;
-        background-color: $color-secondary-400;
+        background-color: $color-blue-400;
         border-radius: 100%;
     }
 }
@@ -338,20 +341,20 @@ h2 {
 
         &-link {
             @include quicksand;
-            font-style: $fs-sm;
+            font-style: $fs-xs;
             font-weight: $fw-medium;
             color: $color-primary-900;
             text-decoration: none;
             transition: $transition;
 
             &:hover {
-                color: $color-secondary-200;
+                color: $color-blue-200;
                 font-weight: $fw-bold;
             }
 
             &--active {
                 font-weight: $fw-bold;
-                color: $color-secondary-200;
+                color: $color-blue-200;
             }
         }
     }
@@ -381,7 +384,7 @@ h2 {
 
             &:hover {
                 path {
-                    fill: $color-secondary-200;
+                    fill: $color-blue-200;
                 }
                 
             }
@@ -574,7 +577,7 @@ h2 {
 
                 font-weight: $fw-bold;
                 font-size: $fw-bold;
-                color: $color-secondary-800;
+                color: $color-blue-800;
                 margin-bottom: $base*8;
             }
 
@@ -592,7 +595,7 @@ h2 {
     align-items: center;
     margin: 0 $base*4;
     font-weight: $fw-medium;
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     line-height: $base * 10;
 
     &::before,
@@ -627,7 +630,7 @@ h2 {
     &__number {
         @include quicksand();
 
-        font-size: $fs-xl;
+        font-size: $fs-xxl;
         font-weight: $fw-regular;
     }
 
@@ -636,7 +639,8 @@ h2 {
         @include quicksand();
 
         width: 50%;
-        font-size: $fs-lg;
+        font-size: $fs-m;
+        font-size: $fs-l;
         font-weight: $fw-medium;
         line-height: 1.5;
     }
@@ -659,20 +663,20 @@ h2 {
             color: $color-white;
             font-weight: $fw-medium;
             font-size: $base * 12;
-            margin-bottom: 27px;
+            margin-bottom: $base * 8;
         }
     }
 
     &__right {
         text-align: left;
         background-color: #E9EFFF;
-        color: $color-secondary-300;
+        color: $color-blue-300;
 
         h3 {
-            color: $color-secondary-300;
+            color: $color-blue-300;
             font-weight: $fw-medium;
             font-size: $base * 12;
-            margin-bottom: 27px;
+            margin-bottom: $base * 8;
         }
     }
 }
@@ -683,7 +687,7 @@ h2 {
     background-color: #F5F8FF;
 
     .section-subtitle {
-        font-size: 24px;
+        font-size: $fs-l;
         font-weight: $fw-light;
         margin-bottom: $base * 24;
     }
@@ -691,8 +695,8 @@ h2 {
     h3 {
         @include quicksand();
 
-        font-size: 34px;
-        margin-bottom: 34px;
+        font-size: $fs-xl;
+        margin-bottom: $base * 8;
     }
 
 
@@ -712,6 +716,7 @@ h2 {
 
     &__item {
         display: flex;
+        justify-content: space-between;
         padding: $base*16 $base*8;
 
         &-gallery,
@@ -732,7 +737,8 @@ h2 {
                 overflow: hidden;
                 box-shadow: 0px $base*4 $base*25 0px #E5EBF8;
 
-                .loupe {
+                &::after {
+                    content: '';
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -747,10 +753,8 @@ h2 {
                     transition: $transition;
                 }
 
-                &:hover {
-                    .loupe {
+                &:hover::after {
                         opacity: 1;
-                    }
                 }
 
                 img {
@@ -774,7 +778,7 @@ h2 {
                     grid-column: 1 / 3;
                     
                     &::before {
-                        background: linear-gradient(transparent, $color-warning-500);
+                        background: linear-gradient(transparent, $color-yellow-500);
                     }
                 }
 
@@ -783,7 +787,7 @@ h2 {
                     grid-column: 3 / 4;
                     
                     &::before {
-                        background: linear-gradient(transparent, $color-danger-500);
+                        background: linear-gradient(transparent, $color-red-500);
                     }
                 }
                 &--s-2 {
@@ -798,12 +802,11 @@ h2 {
         }
 
         &-content {
-            margin-left: 10%;
 
             .title {
             }
             .text {
-                font-size: $fs-md;
+                font-size: $fs-s;
                 line-height: 2;
                 margin-bottom: $base * 10;
             }
@@ -848,9 +851,9 @@ h2 {
         @include quicksand();
 
         font-weight: $fw-light;
-        font-size: 36px;
+        font-size: $fs-xl;
 
-        margin-top: 31px;
+        margin-top: $base * 8;
     }
 
     &__left,
@@ -878,7 +881,7 @@ h2 {
         box-shadow: 0px $base $base*12 0px #F3F5FA;
 
         &-text {
-            font-size: $fs-md;
+            font-size: $fs-s;
             line-height: 2;
             color: $color-primary-800;
         }
@@ -890,11 +893,10 @@ h2 {
             left: 50%;
             width: $heigth;
             height: $heigth;
-            margin-top: -$heigth/2;
             border-radius: 100%;
             overflow: hidden;
             background-color:$color-white;
-            transform: translateX(-50%);
+            transform: translate(-50%, -$heigth/2);
         }
     }
 }
@@ -908,7 +910,7 @@ h2 {
 
         font-weight: $fw-light;
         font-size: $base * 6;
-        margin-bottom: 68px;
+        margin-bottom: $base * 17;
     }
 
     .faq-accordion {
@@ -954,7 +956,7 @@ h2 {
                     }
                 }
                 &-text {
-                    font-size: $fs-md;
+                    font-size: $fs-s;
                 }
             }
 
@@ -964,7 +966,7 @@ h2 {
 
                 &-text {
                     flex-grow: 1;
-                    font-size: $fs-md;
+                    font-size: $fs-s;
                     line-height: 2;
                 }
                 &-btn {
@@ -980,11 +982,19 @@ h2 {
 .section-get-started {
     position: relative;
     color: $color-white;
-    background: linear-gradient($color-secondary-100, $color-secondary-300);
+    background: linear-gradient($color-blue-100, $color-blue-300);
     text-align: center;
 
-    .section-subtitle {
+    h2 {
+        color: #fff;
+    }
+
+    h3 {
         color: $color-white;
+
+        span {
+            font-weight: $fw-medium;
+        }
     }
 
     &::before {
@@ -1001,19 +1011,6 @@ h2 {
     .section-inner {
         position: relative;
         z-index: 10;
-    }
-
-    h2,
-    h5 {
-        color: $color-white;
-    }
-
-    h2 {
-        font-weight: $fw-light;
-
-        span {
-            font-weight: $fw-medium;
-        }
     }
 
     .text {
@@ -1040,16 +1037,17 @@ h2 {
         &-title {
             @include quicksand();
 
-            font-size: $fs-lg;
+            font-size: $fs-m;
+            font-size: $fs-l;
             font-weight: $fw-bold;
-            color: $color-secondary-900;
+            color: $color-blue-900;
 
             margin-bottom: $base * 4;
         }
 
         &-text {
             line-height: 2;
-            font-size: $fs-md;
+            font-size: $fs-s;
         }
     }
     &__right {
@@ -1088,7 +1086,7 @@ h2 {
 .copyright {
     @include quicksand;
 
-    font-size: $fs-sm;
+    font-size: $fs-xs;
     font-weight: $fw-medium;
 
     margin-top: $base * 7 ;
