@@ -19,6 +19,18 @@
 // Mixin ends
 
 // Variables
+// $breakpoint-xs-min: 0;
+$breakpoint-xs-max: $breakpoint-sm-min - 1px;
+$breakpoint-sm-min: 576px;
+$breakpoint-sm-max: $breakpoint-md-min - 1px;
+$breakpoint-md-min: 768px;
+$breakpoint-md-max: $breakpoint-lg-min - 1px;
+$breakpoint-lg-min: 992px;
+$breakpoint-lg-max: $breakpoint-xl-min - 1px;
+$breakpoint-xl-min: 1200px;
+$breakpoint-xl-max: $breakpoint-xxl-min - 1px;
+$breakpoint-xxl-min: 1400px;
+
 $base: 4px;
 
 $fw-light: 300;
@@ -93,6 +105,7 @@ body {
 
 .section-outer {
     border-bottom: 1px solid $color-devider;
+    padding: 0 $base*5;
 }
 
 .section-inner {
@@ -402,6 +415,7 @@ h2 {
 .section-hero-image {
     background-color: #f4f7ff;
     position: relative;
+    padding: 0;
 
     .dots {
         position: absolute;
@@ -620,8 +634,7 @@ h2 {
 .section-stats {
     background-color: #e9efff;
     display: flex;
-
-
+    padding: 0;
 
     &__icon {
         margin-bottom: $base * 6;

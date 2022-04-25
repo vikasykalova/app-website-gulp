@@ -7,6 +7,7 @@ body {
 
 .section-outer {
   border-bottom: 1px solid #D1D1E4;
+  padding: 0 20px;
 }
 
 .section-inner {
@@ -246,6 +247,7 @@ h2 {
 .section-hero-image {
   background-color: #f4f7ff;
   position: relative;
+  padding: 0;
 }
 .section-hero-image .dots {
   position: absolute;
@@ -419,6 +421,7 @@ h2 {
 .section-stats {
   background-color: #e9efff;
   display: flex;
+  padding: 0;
 }
 .section-stats__icon {
   margin-bottom: 24px;
