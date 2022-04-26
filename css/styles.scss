@@ -1136,7 +1136,6 @@ h2 {
     .section-inner {
         display: flex;
         justify-content: space-between;
-        align-items: center;
 
         @media (max-width: $breakpoint-md-max) {
             flex-direction: column;

@@ -843,7 +843,6 @@ h2 {
 .section-newsletter .section-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 @media (max-width: 991px) {
   .section-newsletter .section-inner {
